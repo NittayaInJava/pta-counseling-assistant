@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Rezept</title>
+    <link rel="stylesheet" href="styles2.css"/>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="/" aria-lebel="Medicus Startseite">MEDICUS</a>
+
+        <nav class="nav">
+            <a href="#contact" class="nav-link nav-contact">Kontakt</a>
+            <a href="#beratung" class="nav-link nav-beratung">Zur Beratung</a>
+        </nav>
+    </div>
+
+    <section class="page">
+        <div class="container">
+            <header class="page-head">
+                <h1 class="page-title">E-Rezept einlösen</h1>
+                <p class="page-sub">Code eingeben oder QR-Code scannen.</p>
+            </header>
+
+
+            <main class="card">
+                <div class="tabs">
+                    <button class="tab is-active" type="button">Code eingeben</button>
+                    <button class="tab" type="button">QR scannen</button>
+                </div>
+
+                <div class="panel">
+                    <label class="field">
+                        <span class="label">Rezeptcode</span>
+                        <input class="input" type="text" placeholder="z. B. ABCD-1234-EFGH" />
+                        <span class="hint">Der Code steht auf dem Ausdruck oder in deiner Gesundheits-App.</span>
+                    </label>
+
+                    <div class="actions">
+                        <div class="button-wrap">
+                            <button type="button"><span>Weiter</span></button>
+                            <div class="button-shadow"></div>
+                        </div>
+
+                        <a class="link" href="#">Probleme beim Einlösen?</a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+</header>
+</body>
+</html>
+
+<script src="/app.js"></script>

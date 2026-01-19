@@ -1,0 +1,249 @@
+ /* Basis */
+ * { box-sizing: border-box; }
+
+ :root{
+   --container: 1120px;
+   --text: #0b1220;
+   --stroke: rgba(15, 23, 42, 0.10);
+   --radius-pill: 999px;
+
+   --space-2: 16px;
+   --space-3: 24px;
+   --bg-main: #fff1b5;
+     --bg-surface: #fff1b5;
+     --accent-warm: #d8c6a5;
+
+     --text-primary: #1a1a1a;
+     --text-muted: #6b6b6b;
+     --border-soft: #e2d6c2;
+ }
+
+ body{
+   margin: 0;
+   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+   background: var(--bg-main);
+   color: var(--text-primary);
+ }
+
+ .container{
+   max-width: var(--container);
+   margin: 0 auto;
+   padding: 0 var(--space-3);
+ }
+
+ /* Header */
+ .site-header{
+   position: sticky;
+   top: 0;
+   z-index: 20;
+   background: #fff;
+   border-bottom: 1px solid var(--stroke);
+ }
+
+ .header-inner{
+   height: 72px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+ }
+
+ /* Brand */
+ .brand{
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #000000;
+  width: 100%;
+
+  text-decoration: none;
+ }
+
+.brand:hover{
+  opacity: 0.85;
+}
+@media (max-width: 600px){
+  .brand{
+    font-size: 32px;
+  }
+}
+ /* Nav */
+ .nav{
+   display: flex;
+   align-items: center;
+   gap: 24px;
+ }
+
+ .nav-link{
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 1.45;
+   letter-spacing: -0.005em;
+
+   color: #000000;
+   text-decoration: none;
+   display: inline-flex;
+   align-items: center;
+
+   cursor: pointer;
+ }
+
+ .nav-link:hover{
+   opacity: 0.7;
+ }
+
+.nav-contact{
+}
+
+.nav-beratung{
+width: 100px;
+justify-content: center;
+text-align: center;}
+
+
+ /* Optional: "Zur Beratung" als leicht hervorgehobener Link */
+ .nav-cta{
+   padding: 8px 12px;
+   border-radius: var(--radius-pill);
+   border: 1px solid var(--stroke);
+ }
+
+ /* Mobile */
+ @media (max-width: 520px){
+   .brand{ font-size: 22px; }
+   .header-inner{ height: 64px; }
+   .nav{ gap: var(--space-2); }
+   .nav-cta{ padding: 6px 10px; }
+ }
+
+
+
+.page{
+  background: var(--bg-main);
+  padding: 40px 0 72px;
+}
+
+.page-head{
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 20px;
+}
+
+.page-title{
+  margin: 0;
+  font-size: clamp(26px, 3vw, 40px);
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  -webkit-text-stroke: 1.25px #C1B98E;
+
+}
+
+.page-sub{
+  margin: 10px 0 0;
+  color: #C1B98E;
+  opacity: 0.9;
+}
+
+.stepper{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 18px 0 24px;
+  flex-wrap: wrap;
+}
+
+.step{
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.9);
+  font-size: 14px;
+}
+
+.step.is-active{
+  background: rgba(255,255,255,0.35);
+  color: #ffffff;
+}
+
+.card{
+  max-width: 640px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(255,255,255,0.7);
+  border-radius: 24px;
+  padding: 18px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.tabs{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.tab{
+  all: unset;
+  cursor: pointer;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.6);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tab.is-active{
+  background: rgba(255,255,255,0.9);
+}
+
+.field{
+  display: grid;
+  gap: 8px;
+  margin: 8px 0 16px;
+}
+
+.label{
+  font-weight: 700;
+  font-size: 13px;
+  color: rgba(0,0,0,0.75);
+}
+
+.input{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.9);
+  font-size: 16px;
+  outline: none;
+}
+
+.input:focus{
+  border-color: rgba(0,0,0,0.25);
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.6);
+}
+
+.hint{
+  font-size: 12px;
+  color: rgba(0,0,0,0.55);
+}
+
+.actions{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.link{
+  color: rgba(0,0,0,0.65);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
